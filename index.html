@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safelink Download - MANAGER ABAL-ABAL</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            background-color: #1e1e1e;
+            max-width: 500px;
+            width: 100%;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+            text-align: center;
+            border: 1px solid #333;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f39c12;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            font-size: 13px;
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+        
+        /* Style untuk Fitur Pencarian */
+        .search-box {
+            width: 100%;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .search-input {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: #f39c12;
+            box-shadow: 0 0 8px rgba(243, 156, 18, 0.3);
+        }
+        .no-results {
+            display: none;
+            color: #e74c3c;
+            font-size: 14px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .download-box {
+            background-color: #252525;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #444;
+            text-align: left;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        
+        /* Style untuk Thumbnail Gambar YouTube */
+        .thumbnail-img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            background-color: #1a1a1a;
+            object-fit: cover;
+            border-bottom: 1px solid #444;
+            display: block;
+        }
+
+        .box-content {
+            padding: 20px;
+        }
+
+        .file-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #f1c40f;
+            margin-bottom: 8px;
+        }
+        .file-info {
+            font-size: 13px;
+            color: #ccc;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        /* Style Tombol Multi-Status & Multi-Button */
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn-start {
+            background-color: #3498db;
+            color: #fff;
+        }
+        .btn-start:hover {
+            background-color: #2980b9;
+        }
+        .btn-waiting {
+            background-color: #e74c3c;
+            color: #fff;
+            cursor: not-allowed;
+        }
+        .btn-go {
+            background-color: #2ecc71;
+            color: #fff;
+            animation: pulse 1.5s infinite;
+        }
+        .btn-go:hover {
+            background-color: #27ae60;
+        }
+        /* Slot Iklan Banner Adsterra */
+        .ad-slot {
+            background-color: #1a1a1a;
+            width: 100%;
+            min-height: 90px;
+            margin: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            border: 1px dashed #444;
+            overflow: hidden;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+        .note {
+            font-size: 11px;
+            color: #666;
+            margin-top: 15px;
+            line-height: 1.4;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="logo">⚽ MANAGER ABAL-ABAL ⚽</div>
+    <div class="subtitle">Safelink Download System - Bebas Malware & Aman</div>
+
+    <!-- FITUR INPUT PENCARIAN -->
+    <div class="search-box">
+        <input type="text" id="searchInput" class="search-input" placeholder="🔍 Cari nama game, patch atau bahan..." onkeyup="filterLinks()">
+    </div>
+
+    <!-- [1] IKLAN BANNER ATAS (728x90) -->
+    <div class="ad-slot">
+        <script> atOptions = { 'key' : '87e5082d860101407464681673d2af16', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/87e5082d860101407464681673d2af16/invoke.js"></script> 
+    </div>
+
+    <!-- Pesan jika file tidak ditemukan -->
+    <div id="noResultsMessage" class="no-results">❌ File yang Anda cari tidak ditemukan!</div>
+
+    <!-- ================= BAHAN 1 ================= -->
+    <div class="download-box">
+        <img src="https://img.youtube.com/vi/MOpL6vPdcus/maxresdefault.jpg" alt="Thumbnail Skin World Cup" class="thumbnail-img" onerror="this.src='https://placehold.co/600x338/2c2c2c/ffffff?text=Skin+World+Cup+2026+Pack'">
+        <div class="box-content">
+            <div class="file-title">1. Patch Skin World Cup 2026</div>
+            <div class="file-info">
+                <strong>Kategori:</strong> Mod Grafis FMM<br>
+                <strong>Status File:</strong> Terverifikasi (Google Drive)
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-start" onclick="startTimer(this, 'https://drive.google.com/file/d/1RcCDBK_DdCbK6K3f4n8gU9LZgnl7i7qL/view')">
+                    🔓 Buka Link Download Skin
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= BAHAN 2 ================= -->
+    <div class="download-box">
+        <img src="https://img.youtube.com/vi/s71q-dMRMYc/maxresdefault.jpg" alt="Thumbnail Stadium FMM2026" class="thumbnail-img">
+        <div class="box-content">
+            <div class="file-title">2. Patch Stadium FMM2026</div>
+            <div class="file-info">
+                <strong>Kategori:</strong> Stadium Pack Mod<br>
+                <strong>Status File:</strong> Terverifikasi (Google Drive)
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-start" onclick="startTimer(this, 'https://drive.google.com/file/d/12voVC1eN5FNcKREeilpdk1lIkmUWO57V/view')">
+                    🔓 Buka Link Download Stadium
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- [2] IKLAN BANNER TENGAH (728x90) -->
+    <div class="ad-slot">
+        <script> atOptions = { 'key' : '87e5082d860101407464681673d2af16', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/87e5082d860101407464681673d2af16/invoke.js"></script> 
+    </div>
+
+    <!-- ================= BAHAN 3 ================= -->
+    <div class="download-box">
+        <img src="https://img.youtube.com/vi/vZIfTqRBLso/maxresdefault.jpg" alt="Thumbnail eFootball Cloning" class="thumbnail-img">
+        <div class="box-content">
+            <div class="file-title">3. Cloning eFootball Terbaru (Juni 2026)</div>
+            <div class="file-info">
+                <strong>Kategori:</strong> Tools & Data Clone eFootball<br>
+                <strong>Status File:</strong> Lengkap (Google Drive & MediaFire)
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-start" onclick="startTimer(this, 'https://drive.google.com/file/d/1lGcgnbtmJkvkyIoO6WqS_Wm_eMFhXaqJ/view')">
+                    🔓 1. Download APK Dual Space
+                </button>
+                <button class="btn btn-start" onclick="startTimer(this, 'https://drive.google.com/file/d/1sxBKumsv8xtulpWaJOQ8a_eMMde44Anl/view')">
+                    🔓 2. Download Root Explorer
+                </button>
+                <button class="btn btn-start" onclick="startTimer(this, 'https://www.mediafire.com/file/rqu4iv4wkv90zs0/konami04.06.26.tar/file')">
+                    🔓 3. Download File Data Clone (.tar)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= BAHAN 4 ================= -->
+    <div class="download-box">
+        <img src="https://img.youtube.com/vi/N3bx3iMvKNA/maxresdefault.jpg" alt="Thumbnail FM21 Touch" class="thumbnail-img">
+        <div class="box-content">
+            <div class="file-title">4. Football Manager 2021 Touch Android</div>
+            <div class="file-info">
+                <strong>Kategori:</strong> Full Game APK & DATA<br>
+                <strong>Status File:</strong> Terverifikasi (MediaFire)
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-start" onclick="startTimer(this, 'https://www.mediafire.com/file/pdtp61f7yxljp0v/APK_FM-2021-touch-v21.3.0-paid_by_Adsyah.apk/file')">
+                    🔓 1. Download APK FM21 Touch
+                </button>
+                <button class="btn btn-start" onclick="startTimer(this, 'https://www.mediafire.com/file/5gv1ppnnl5o7hr8/DATA_FM_2021-touch-v21.3.0_by_Adsyah.zip/file')">
+                    🔓 2. Download DATA OBB
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= BAHAN 5 ================= -->
+    <div class="download-box">
+        <img src="https://img.youtube.com/vi/WzI03ZxtrTk/hqdefault.jpg" alt="Thumbnail eFootball Anti Lag" class="thumbnail-img">
+        <div class="box-content">
+            <div class="file-title">5. eFootball 2026 Config Anti Lag</div>
+            <div class="file-info">
+                <strong>Kategori:</strong> Game Performance Config<br>
+                <strong>Status File:</strong> Terverifikasi (Google Drive)
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-start" onclick="startTimer(this, 'https://drive.google.com/file/d/1sj6tnoQPMFcsXcSIbjBCxswF5krrRQyr/view?usp=drivesdk')">
+                    🔓 Download Config Anti Lag
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= BAHAN 6 ================= -->
+    <div class="download-box">
+        <img src="https://img.youtube.com/vi/ZqgnSntTUEk/maxresdefault.jpg" alt="Thumbnail Face Pemain Manual" class="thumbnail-img">
+        <div class="box-content">
+            <div class="file-title">6. Cara Pasang Face Pemain Secara Manual</div>
+            <div class="file-info">
+                <strong>Kategori:</strong> Player Facepack Manual Custom<br>
+                <strong>Status File:</strong> Terverifikasi (Google Drive)
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-start" onclick="startTimer(this, 'https://drive.google.com/file/d/1deqWRLWLE-cDvZiKTAfKIwzME0Mt4ph1/view')">
+                    🔓 Download File Face Pemain
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= BAHAN 7 ================= -->
+    <div class="download-box">
+        <img src="https://img.youtube.com/vi/ZfBF3-xXTvc/maxresdefault.jpg" alt="Thumbnail Background FMM26" class="thumbnail-img">
+        <div class="box-content">
+            <div class="file-title">7. Cara Ganti Background FM 26 Mobile</div>
+            <div class="file-info">
+                <strong>Kategori:</strong> UI Custom Background Pack<br>
+                <strong>Status File:</strong> Terverifikasi (Google Drive)
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-start" onclick="startTimer(this, 'https://drive.google.com/file/d/1hmsRbNn7jNQoG43_xiQBooSxivpitUiA/view')">
+                    🔓 Download File Background Pack
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= BAHAN 8 ================= -->
+    <div class="download-box">
+        <img src="https://img.youtube.com/vi/wF6TBPqeG74/maxresdefault.jpg" alt="Thumbnail Background Card FMM26" class="thumbnail-img">
+        <div class="box-content">
+            <div class="file-title">8. Cara Ganti Background Card FMM26</div>
+            <div class="file-info">
+                <strong>Kategori:</strong> UI Player Card Template Pack<br>
+                <strong>Status File:</strong> Terverifikasi (Google Drive)
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-start" onclick="startTimer(this, 'https://drive.google.com/file/d/1g3qW9F6Etk2YHv9Mb6RCvTP9ZH2ZhLYC/view?usp=drivesdk')">
+                    🔓 Download File Background Card Template
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= BAHAN 9 ================= -->
+    <div class="download-box">
+        <img src="https://img.youtube.com/vi/C1c7f5J86Ns/maxresdefault.jpg" alt="Thumbnail Facepack No Selfie" class="thumbnail-img">
+        <div class="box-content">
+            <div class="file-title">9. Cara Ganti Face Pack Manager 26 Mobile Tanpa Selfie</div>
+            <div class="file-info">
+                <strong>Kategori:</strong> Manager Profile Facepack Fix<br>
+                <strong>Status File:</strong> Terverifikasi (Google Drive)
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-start" onclick="startTimer(this, 'https://drive.google.com/file/d/18QMUP4ZkhrrvHDbm02phqb_TReP4ATwL/view?usp=drivesdk')">
+                    🔓 Download File Face Pack Manager
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= BAHAN 10 ================= -->
+    <div class="download-box">
+        <img src="https://img.youtube.com/vi/EWyjmpG-biY/maxresdefault.jpg" alt="Thumbnail Pasang Face Pack FMM26" class="thumbnail-img">
+        <div class="box-content">
+            <div class="file-title">10. Cara Pasang Face Pack FMM26 (.fmf)</div>
+            <div class="file-info">
+                <strong>Kategori:</strong> Megapack Real Player Faces<br>
+                <strong>Status File:</strong> Terverifikasi (MediaFire)
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-start" onclick="startTimer(this, 'https://www.mediafire.com/file/dhwiwmur37n05ze/Faces.fmf/file')">
+                    🔓 Download Faces.fmf Megapack
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- [3] IKLAN BANNER BAWAH (728x90) -->
+    <div class="ad-slot">
+        <script> atOptions = { 'key' : '87e5082d860101407464681673d2af16', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/87e5082d860101407464681673d2af16/invoke.js"></script> 
+    </div>
+
+    <div class="note">
+        *Melihat atau membiarkan iklan tayang saat menunggu hitung mundur sangat membantu perkembangan channel YouTube MANAGER ABAL-ABAL. Terima kasih atas dukungannya!
+    </div>
+</div>
+
+<script>
+    // Fungsi Logika Baru: Membaca elemen tombol langsung (anti-error & super responsif)
+    function startTimer(btnElement, targetUrl) {
+        if (btnElement.classList.contains('btn-waiting') || btnElement.classList.contains('btn-go')) return;
+
+        let timeLeft = 10; 
+        btnElement.className = 'btn btn-waiting';
+        btnElement.innerHTML = `Menyiapkan file... Mohon tunggu (${timeLeft}s)`;
+
+        const countdown = setInterval(() => {
+            timeLeft--;
+            btnElement.innerHTML = `Menyiapkan file... Mohon tunggu (${timeLeft}s)`;
+
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                btnElement.className = 'btn btn-go';
+                btnElement.innerHTML = '🚀 DOWNLOAD SEKARANG';
+                
+                btnElement.onclick = function() {
+                    window.open(targetUrl, '_blank');
+                };
+            }
+        }, 1000);
+    }
+
+    // Fungsi Kolom Pencarian Pintar
+    function filterLinks() {
+        const input = document.getElementById('searchInput');
+        const filter = input.value.toLowerCase();
+        const boxes = document.getElementsByClassName('download-box');
+        const noResults = document.getElementById('noResultsMessage');
+        let totalVisible = 0;
+
+        for (let i = 0; i < boxes.length; i++) {
+            const title = boxes[i].getElementsByClassName('file-title')[0].innerText.toLowerCase();
+            const info = boxes[i].getElementsByClassName('file-info')[0].innerText.toLowerCase();
+            
+            if (title.includes(filter) || info.includes(filter)) {
+                boxes[i].style.display = "block";
+                totalVisible++;
+            } else {
+                boxes[i].style.display = "none";
+            }
+        }
+
+        if (totalVisible === 0) {
+            noResults.style.display = "block";
+        } else {
+            noResults.style.display = "none";
+        }
+    }
+</script>
+
+<!-- IKLAN POPUNDER & SOCIAL BAR ADSTERRA -->
+<script src="https://pl30212426.effectivecpmnetwork.com/52/6d/9b/526d9b13dd517acae384df9af2f48548.js"></script> 
+<script src="https://pl30212425.effectivecpmnetwork.com/55/9e/07/559e07a11ded21f9cbf1db19e0b84632.js"></script>
+
+</body>
+</html>
