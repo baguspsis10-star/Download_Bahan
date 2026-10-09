@@ -658,6 +658,18 @@
             noResults.style.display = "none";
         }
     }
+
+    // --- AUTO-FILTER DARI URL PARAMETER (?q= atau ?cari=) ---
+    window.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('q') || urlParams.get('cari');
+        
+        if (query) {
+            const searchInput = document.getElementById('searchInput');
+            searchInput.value = decodeURIComponent(query);
+            filterLinks(); // Jalankan penyaringan secara otomatis saat halaman selesai dimuat
+        }
+    });
 </script>
 
 <script src="https://pl30212425.effectivecpmnetwork.com/55/9e/07/559e07a11ded21f9cbf1db19e0b84632.js"></script>
