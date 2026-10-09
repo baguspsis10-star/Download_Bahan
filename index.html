@@ -196,7 +196,7 @@
         .file-info {
             font-size: 13px;
             color: #a0aec0;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             line-height: 1.6;
             background: rgba(0, 0, 0, 0.15);
             padding: 10px 14px;
@@ -205,6 +205,21 @@
         }
         .file-info strong {
             color: #d4af37;
+        }
+        
+        /* STYLE UNTUK BADGE JUMLAH DOWNLOAD */
+        .download-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #ffe082;
+            background: rgba(212, 175, 55, 0.1);
+            padding: 4px 10px;
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            margin-bottom: 15px;
         }
 
         /* --- LUXURY BUTTONS CONTROLS --- */
@@ -333,7 +348,7 @@
 
     <div id="noResultsMessage" class="no-results">❌ File yang Anda cari tidak ditemukan!</div>
 
-    <!-- ITEM TERBARU -->
+    <!-- ITEM 1 -->
     <div class="download-box">
         <img src="https://cdn.phototourl.com/free/2026-08-07-ae6cc660-7696-42c7-856b-6fe9daedc73e.jpg" alt="Thumbnail eFootball Mod / Patch" class="thumbnail-img" onerror="this.src='https://placehold.co/600x338/2c2c2c/ffffff?text=eFootball+Mod+Patch'">
         <div class="box-content">
@@ -342,11 +357,12 @@
                 <strong>Kategori:</strong> Game APK & Data OBB<br>
                 <strong>Status File:</strong> Terverifikasi (Google Drive & MediaFire)
             </div>
+            <div class="download-badge">📥 Diunduh: <span id="cnt-efootball-apk">...</span> kali</div>
             <div class="btn-group">
-                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://drive.google.com/file/d/1RbgfFFDKnH1rl8kATYB77VYFufjNo0V3/view?usp=drivesdk', 'eFootball Mod APK')">
+                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://drive.google.com/file/d/1RbgfFFDKnH1rl8kATYB77VYFufjNo0V3/view?usp=drivesdk', 'eFootball Mod APK', 'efootball-apk')">
                     🔓 1. Download APK Game
                 </a>
-                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://www.mediafire.com/file/q78g2ut4m1fixxg/jp.konami.pesam.zip/file', 'eFootball OBB ZIP')">
+                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://www.mediafire.com/file/q78g2ut4m1fixxg/jp.konami.pesam.zip/file', 'eFootball OBB ZIP', 'efootball-obb')">
                     🔓 2. Download File OBB (ZIP)
                 </a>
             </div>
@@ -357,6 +373,7 @@
         <script> atOptions = { 'key' : '87e5082d860101407464681673d2af16', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/87e5082d860101407464681673d2af16/invoke.js"></script> 
     </div>
 
+    <!-- ITEM 2 -->
     <div class="download-box">
         <img src="https://cdn.phototourl.com/free/2026-07-08-30c25470-2486-473d-8fe6-ae7c86568825.jpg" alt="Thumbnail Cara Pasang Card Pemain" class="thumbnail-img" onerror="this.src='https://placehold.co/600x338/2c2c2c/ffffff?text=Card+Pemain+FMM26'">
         <div class="box-content">
@@ -365,8 +382,9 @@
                 <strong>Kategori:</strong> UI Player Card Custom Mod<br>
                 <strong>Status File:</strong> Terverifikasi (Google Drive)
             </div>
+            <div class="download-badge">📥 Diunduh: <span id="cnt-card-fmm26">...</span> kali</div>
             <div class="btn-group">
-                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://drive.google.com/file/d/102CaafT5vR9rOvNBM9OkxKVCSczg-En0/view?usp=drivesdk', 'Card Pemain FMM26')">
+                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://drive.google.com/file/d/102CaafT5vR9rOvNBM9OkxKVCSczg-En0/view?usp=drivesdk', 'Card Pemain FMM26', 'card-fmm26')">
                     🔓 Buka Link (Lewati Iklan)
                 </a>
             </div>
@@ -377,6 +395,7 @@
         <script> atOptions = { 'key' : '87e5082d860101407464681673d2af16', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/87e5082d860101407464681673d2af16/invoke.js"></script> 
     </div>
 
+    <!-- ITEM 3 -->
     <div class="download-box">
         <img src="https://img.youtube.com/vi/MOpL6vPdcus/maxresdefault.jpg" alt="Thumbnail Skin World Cup" class="thumbnail-img" onerror="this.src='https://placehold.co/600x338/2c2c2c/ffffff?text=Skin+World+Cup+2026+Pack'">
         <div class="box-content">
@@ -385,8 +404,9 @@
                 <strong>Kategori:</strong> Mod Grafis FMM<br>
                 <strong>Status File:</strong> Terverifikasi (Google Drive)
             </div>
+            <div class="download-badge">📥 Diunduh: <span id="cnt-skin-worldcup">...</span> kali</div>
             <div class="btn-group">
-                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://drive.google.com/file/d/1RcCDBK_DdCbK6K3f4n8gU9LZgnl7i7qL/view', 'Skin World Cup 2026')">
+                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://drive.google.com/file/d/1RcCDBK_DdCbK6K3f4n8gU9LZgnl7i7qL/view', 'Skin World Cup 2026', 'skin-worldcup')">
                     🔓 Buka Link (Lewati Iklan)
                 </a>
             </div>
@@ -397,6 +417,7 @@
         <script> atOptions = { 'key' : '87e5082d860101407464681673d2af16', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/87e5082d860101407464681673d2af16/invoke.js"></script> 
     </div>
 
+    <!-- ITEM 4 -->
     <div class="download-box">
         <img src="https://img.youtube.com/vi/s71q-dMRMYc/maxresdefault.jpg" alt="Thumbnail Stadium FMM2026" class="thumbnail-img">
         <div class="box-content">
@@ -405,8 +426,9 @@
                 <strong>Kategori:</strong> Stadium Pack Mod<br>
                 <strong>Status File:</strong> Terverifikasi (Google Drive)
             </div>
+            <div class="download-badge">📥 Diunduh: <span id="cnt-stadium-fmm26">...</span> kali</div>
             <div class="btn-group">
-                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://drive.google.com/file/d/12voVC1eN5FNcKREeilpdk1lIkmUWO57V/view', 'Stadium FMM2026')">
+                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://drive.google.com/file/d/12voVC1eN5FNcKREeilpdk1lIkmUWO57V/view', 'Stadium FMM2026', 'stadium-fmm26')">
                     🔓 Buka Link (Lewati Iklan)
                 </a>
             </div>
@@ -417,6 +439,7 @@
         <script> atOptions = { 'key' : '87e5082d860101407464681673d2af16', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/87e5082d860101407464681673d2af16/invoke.js"></script> 
     </div>
 
+    <!-- ITEM 5 -->
     <div class="download-box">
         <img src="https://img.youtube.com/vi/vZIfTqRBLso/maxresdefault.jpg" alt="Thumbnail eFootball Cloning" class="thumbnail-img">
         <div class="box-content">
@@ -425,14 +448,15 @@
                 <strong>Kategori:</strong> Tools & Data Clone eFootball<br>
                 <strong>Status File:</strong> Lengkap (Google Drive & MediaFire)
             </div>
+            <div class="download-badge">📥 Diunduh: <span id="cnt-cloning-efootball">...</span> kali</div>
             <div class="btn-group">
-                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://drive.google.com/file/d/1lGcgnbtmJkvkyIoO6WqS_Wm_eMFhXaqJ/view', 'Dual Space eFootball')">
+                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://drive.google.com/file/d/1lGcgnbtmJkvkyIoO6WqS_Wm_eMFhXaqJ/view', 'Dual Space eFootball', 'cloning-efootball')">
                     🔓 1. Download APK Dual Space
                 </a>
-                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://drive.google.com/file/d/1sxBKumsv8xtulpWaJOQ8a_eMMde44Anl/view', 'Root Explorer')">
+                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://drive.google.com/file/d/1sxBKumsv8xtulpWaJOQ8a_eMMde44Anl/view', 'Root Explorer', 'cloning-efootball')">
                     🔓 2. Download Root Explorer
                 </a>
-                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://www.mediafire.com/file/rqu4iv4wkv90zs0/konami04.06.26.tar/file', 'Data Clone TAR')">
+                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://www.mediafire.com/file/rqu4iv4wkv90zs0/konami04.06.26.tar/file', 'Data Clone TAR', 'cloning-efootball')">
                     🔓 3. Download File Data Clone (.tar)
                 </a>
             </div>
@@ -443,6 +467,7 @@
         <script> atOptions = { 'key' : '87e5082d860101407464681673d2af16', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/87e5082d860101407464681673d2af16/invoke.js"></script> 
     </div>
 
+    <!-- ITEM 6 -->
     <div class="download-box">
         <img src="https://img.youtube.com/vi/N3bx3iMvKNA/maxresdefault.jpg" alt="Thumbnail FM21 Touch" class="thumbnail-img">
         <div class="box-content">
@@ -451,11 +476,12 @@
                 <strong>Kategori:</strong> Full Game APK & DATA<br>
                 <strong>Status File:</strong> Terverifikasi (MediaFire)
             </div>
+            <div class="download-badge">📥 Diunduh: <span id="cnt-fm21-touch">...</span> kali</div>
             <div class="btn-group">
-                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://www.mediafire.com/file/pdtp61f7yxljp0v/APK_FM-2021-touch-v21.3.0-paid_by_Adsyah.apk/file', 'APK FM21 Touch')">
+                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://www.mediafire.com/file/pdtp61f7yxljp0v/APK_FM-2021-touch-v21.3.0-paid_by_Adsyah.apk/file', 'APK FM21 Touch', 'fm21-touch')">
                     🔓 1. Download APK FM21 Touch
                 </a>
-                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://www.mediafire.com/file/5gv1ppnnl5o7hr8/DATA_FM_2021-touch-v21.3.0_by_Adsyah.zip/file', 'DATA OBB FM21 Touch')">
+                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://www.mediafire.com/file/5gv1ppnnl5o7hr8/DATA_FM_2021-touch-v21.3.0_by_Adsyah.zip/file', 'DATA OBB FM21 Touch', 'fm21-touch')">
                     🔓 2. Download DATA OBB
                 </a>
             </div>
@@ -466,6 +492,7 @@
         <script> atOptions = { 'key' : '87e5082d860101407464681673d2af16', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/87e5082d860101407464681673d2af16/invoke.js"></script> 
     </div>
 
+    <!-- ITEM 7 -->
     <div class="download-box">
         <img src="https://img.youtube.com/vi/WzI03ZxtrTk/hqdefault.jpg" alt="Thumbnail eFootball Anti Lag" class="thumbnail-img">
         <div class="box-content">
@@ -474,8 +501,9 @@
                 <strong>Kategori:</strong> Game Performance Config<br>
                 <strong>Status File:</strong> Terverifikasi (Google Drive)
             </div>
+            <div class="download-badge">📥 Diunduh: <span id="cnt-efootball-antilag">...</span> kali</div>
             <div class="btn-group">
-                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://drive.google.com/file/d/1sj6tnoQPMFcsXcSIbjBCxswF5krrRQyr/view?usp=drivesdk', 'Config Anti Lag')">
+                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://drive.google.com/file/d/1sj6tnoQPMFcsXcSIbjBCxswF5krrRQyr/view?usp=drivesdk', 'Config Anti Lag', 'efootball-antilag')">
                     🔓 Download Config Anti Lag
                 </a>
             </div>
@@ -486,6 +514,7 @@
         <script> atOptions = { 'key' : '87e5082d860101407464681673d2af16', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/87e5082d860101407464681673d2af16/invoke.js"></script> 
     </div>
 
+    <!-- ITEM 8 -->
     <div class="download-box">
         <img src="https://img.youtube.com/vi/ZqgnSntTUEk/maxresdefault.jpg" alt="Thumbnail Face Pemain Manual" class="thumbnail-img">
         <div class="box-content">
@@ -494,8 +523,9 @@
                 <strong>Kategori:</strong> Player Facepack Manual Custom<br>
                 <strong>Status File:</strong> Terverifikasi (Google Drive)
             </div>
+            <div class="download-badge">📥 Diunduh: <span id="cnt-face-manual">...</span> kali</div>
             <div class="btn-group">
-                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://drive.google.com/file/d/1deqWRLWLE-cDvZiKTAfKIwzME0Mt4ph1/view', 'Face Pemain Manual')">
+                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://drive.google.com/file/d/1deqWRLWLE-cDvZiKTAfKIwzME0Mt4ph1/view', 'Face Pemain Manual', 'face-manual')">
                     🔓 Download File Face Pemain
                 </a>
             </div>
@@ -506,6 +536,7 @@
         <script> atOptions = { 'key' : '87e5082d860101407464681673d2af16', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/87e5082d860101407464681673d2af16/invoke.js"></script> 
     </div>
 
+    <!-- ITEM 9 -->
     <div class="download-box">
         <img src="https://img.youtube.com/vi/ZfBF3-xXTvc/maxresdefault.jpg" alt="Thumbnail Background FMM26" class="thumbnail-img">
         <div class="box-content">
@@ -514,8 +545,9 @@
                 <strong>Kategori:</strong> UI Custom Background Pack<br>
                 <strong>Status File:</strong> Terverifikasi (Google Drive)
             </div>
+            <div class="download-badge">📥 Diunduh: <span id="cnt-bg-fmm26">...</span> kali</div>
             <div class="btn-group">
-                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://drive.google.com/file/d/1hmsRbNn7jNQoG43_xiQBooSxivpitUiA/view', 'Background FM26')">
+                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://drive.google.com/file/d/1hmsRbNn7jNQoG43_xiQBooSxivpitUiA/view', 'Background FM26', 'bg-fmm26')">
                     🔓 Download File Background Pack
                 </a>
             </div>
@@ -526,6 +558,7 @@
         <script> atOptions = { 'key' : '87e5082d860101407464681673d2af16', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/87e5082d860101407464681673d2af16/invoke.js"></script> 
     </div>
 
+    <!-- ITEM 10 -->
     <div class="download-box">
         <img src="https://img.youtube.com/vi/wF6TBPqeG74/maxresdefault.jpg" alt="Thumbnail Background Card FMM26" class="thumbnail-img">
         <div class="box-content">
@@ -534,8 +567,9 @@
                 <strong>Kategori:</strong> UI Player Card Template Pack<br>
                 <strong>Status File:</strong> Terverifikasi (Google Drive)
             </div>
+            <div class="download-badge">📥 Diunduh: <span id="cnt-bg-card-fmm26">...</span> kali</div>
             <div class="btn-group">
-                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://drive.google.com/file/d/1g3qW9F6Etk2YHv9Mb6RCvTP9ZH2ZhLYC/view?usp=drivesdk', 'Background Card Template')">
+                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://drive.google.com/file/d/1g3qW9F6Etk2YHv9Mb6RCvTP9ZH2ZhLYC/view?usp=drivesdk', 'Background Card Template', 'bg-card-fmm26')">
                     🔓 Download File Background Card Template
                 </a>
             </div>
@@ -546,6 +580,7 @@
         <script> atOptions = { 'key' : '87e5082d860101407464681673d2af16', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/87e5082d860101407464681673d2af16/invoke.js"></script> 
     </div>
 
+    <!-- ITEM 11 -->
     <div class="download-box">
         <img src="https://img.youtube.com/vi/C1c7f5J86Ns/maxresdefault.jpg" alt="Thumbnail Facepack No Selfie" class="thumbnail-img">
         <div class="box-content">
@@ -554,8 +589,9 @@
                 <strong>Kategori:</strong> Manager Profile Facepack Fix<br>
                 <strong>Status File:</strong> Terverifikasi (Google Drive)
             </div>
+            <div class="download-badge">📥 Diunduh: <span id="cnt-facepack-noselfie">...</span> kali</div>
             <div class="btn-group">
-                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://drive.google.com/file/d/18QMUP4ZkhrrvHDbm02phqb_TReP4ATwL/view?usp=drivesdk', 'Facepack Manager Tanpa Selfie')">
+                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://drive.google.com/file/d/18QMUP4ZkhrrvHDbm02phqb_TReP4ATwL/view?usp=drivesdk', 'Facepack Manager Tanpa Selfie', 'facepack-noselfie')">
                     🔓 Download File Face Pack Manager
                 </a>
             </div>
@@ -566,6 +602,7 @@
         <script> atOptions = { 'key' : '87e5082d860101407464681673d2af16', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> <script src="https://www.highperformanceformat.com/87e5082d860101407464681673d2af16/invoke.js"></script> 
     </div>
 
+    <!-- ITEM 12 -->
     <div class="download-box">
         <img src="https://img.youtube.com/vi/EWyjmpG-biY/maxresdefault.jpg" alt="Thumbnail Pasang Face Pack FMM26" class="thumbnail-img">
         <div class="box-content">
@@ -574,8 +611,9 @@
                 <strong>Kategori:</strong> Megapack Real Player Faces<br>
                 <strong>Status File:</strong> Terverifikasi (MediaFire)
             </div>
+            <div class="download-badge">📥 Diunduh: <span id="cnt-faces-fmf">...</span> kali</div>
             <div class="btn-group">
-                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://www.mediafire.com/file/dhwiwmur37n05ze/Faces.fmf/file', 'Faces.fmf Megapack')">
+                <a href="https://www.effectivecpmnetwork.com/fndzdhcqc?key=2d249ac4788a32fb89541e6dc86ee3d5" target="_blank" class="btn btn-start" onclick="prosesSafelink(this, 'https://www.mediafire.com/file/dhwiwmur37n05ze/Faces.fmf/file', 'Faces.fmf Megapack', 'faces-fmf')">
                     🔓 Download Faces.fmf Megapack
                 </a>
             </div>
@@ -592,6 +630,8 @@
 </div>
 
 <script>
+    const SITE_NAMESPACE = 'manager-abal-abal-dl';
+
     function toggleGuide() {
         const content = document.getElementById('guideContent');
         const icon = document.getElementById('guideIcon');
@@ -604,7 +644,29 @@
         }
     }
 
-    function prosesSafelink(anchorElement, realDownloadUrl, fileName) {
+    // --- FUNGSI AMBIL KANTONG ANGKA PUBLIK DARI API ---
+    function loadPublicCounts() {
+        const fileKeys = [
+            'efootball-apk', 'card-fmm26', 'skin-worldcup', 'stadium-fmm26',
+            'cloning-efootball', 'fm21-touch', 'efootball-antilag', 'face-manual',
+            'bg-fmm26', 'bg-card-fmm26', 'facepack-noselfie', 'faces-fmf'
+        ];
+
+        fileKeys.forEach(key => {
+            fetch(`https://api.counterapi.dev/v1/${SITE_NAMESPACE}/${key}`)
+                .then(res => res.json())
+                .then(data => {
+                    const el = document.getElementById(`cnt-${key}`);
+                    if (el) el.innerText = data.count || 0;
+                })
+                .catch(() => {
+                    const el = document.getElementById(`cnt-${key}`);
+                    if (el && el.innerText === '...') el.innerText = '0';
+                });
+        });
+    }
+
+    function prosesSafelink(anchorElement, realDownloadUrl, fileName, fileKey) {
         if (anchorElement.classList.contains('btn-waiting') || anchorElement.classList.contains('btn-go')) {
             return;
         }
@@ -629,13 +691,24 @@
                 countdownBtn.innerHTML = '🚀 DOWNLOAD SEKARANG';
                 
                 countdownBtn.onclick = function() {
-                    // PENCATATAN EVENT KE GOOGLE ANALYTICS
+                    // 1. TAMBAH ANGKA PUBLIK
+                    if (fileKey) {
+                        fetch(`https://api.counterapi.dev/v1/${SITE_NAMESPACE}/${fileKey}/up`)
+                            .then(res => res.json())
+                            .then(data => {
+                                const el = document.getElementById(`cnt-${fileKey}`);
+                                if (el) el.innerText = data.count;
+                            }).catch(() => {});
+                    }
+
+                    // 2. REKAM EVENT KE GOOGLE ANALYTICS
                     if (typeof gtag === 'function') {
                         gtag('event', 'file_download', {
                             'file_name': fileName || 'Unknown File',
                             'file_url': realDownloadUrl
                         });
                     }
+
                     window.open(realDownloadUrl, '_blank');
                 };
             }
@@ -677,8 +750,9 @@
         }
     }
 
-    // --- AUTO-FILTER DARI URL PARAMETER (?q= atau ?cari=) ---
     window.addEventListener('DOMContentLoaded', function() {
+        loadPublicCounts();
+
         const urlParams = new URLSearchParams(window.location.search);
         const query = urlParams.get('q') || urlParams.get('cari');
         
